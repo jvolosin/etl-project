@@ -1,4 +1,7 @@
 # etl-project
+
+Happy Hour - Link to Project Proposal 
+
 Rutgers Data Science Bootcamp ETL Project Repo
 
 Your project proposal should contain the following:
