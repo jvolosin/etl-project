@@ -23,4 +23,4 @@ def scrape():
     country_list["Average_Yearly_Temperature_by_Country "] = soup.find("td", class_="htDimmed").get_text()
 
 
-    return listings
+    return country_list
