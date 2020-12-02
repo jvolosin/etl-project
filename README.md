@@ -1,6 +1,8 @@
-# etl-project
+# etl-project 
 
-Happy Hour - Link to Project Proposal 
+Happy Hour - Link to Project Proposal: 
+
+https://docs.google.com/document/d/17fL7fj5vVrmMfuptqBkofTThfss-MIlssyCy2H1bldw/edit?usp=sharing 
 
 Rutgers Data Science Bootcamp ETL Project Repo
 
