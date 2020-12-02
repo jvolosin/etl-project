@@ -16,7 +16,25 @@
 <body>
 
   <!-- Header with primary button to refresh data -->
-  
+  <div class="container-fluid">
+      <div class="jumbotron text-center">
+        <h1><b>Average Yearly Temperature by Country</b></h1>
+        <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scraped Data</a>
+      </div>
+  </div>
+
+  <!-- New section with latest news -->
+  <div class="row">
+      <div class="col-md-12">
+        <div class="media">
+          <div class="media-body">
+            <h3><b>Latest data by Country</b></h3>
+            <h4 class="heading">{{country_list.head}} {{mars_data.news_title}}</h4>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+  </div>
 
   <!-- New section divided into two columns -->
   <div class="row">
