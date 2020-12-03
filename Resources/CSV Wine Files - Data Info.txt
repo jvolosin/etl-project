@@ -41,4 +41,4 @@ Wine Production
 		○ Country: the country where the production data is from
 		○ wineProduction: wine production in liters
 		○ wineProductionGallons: wine production in gallons
-		○ Pop2020: 2020 population
+		○ Pop2020: 2020 population (in 000s)
