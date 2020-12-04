@@ -4,6 +4,10 @@ Happy Hour - Link to Project Proposal:
 
 https://docs.google.com/document/d/17fL7fj5vVrmMfuptqBkofTThfss-MIlssyCy2H1bldw/edit?usp=sharing 
 
+Additional Data:
+https://statpedia.com/stat/Average_Yearly_Temperature_by_Country/HJd7OcGK 
+
+
 Rutgers Data Science Bootcamp ETL Project Repo
 
 Your project proposal should contain the following:

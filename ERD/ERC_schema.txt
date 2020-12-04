@@ -1,0 +1,50 @@
+wine_production
+-
+country varchar PK FK - countries.country
+volume INT
+population Float
+
+wine_consumption
+-
+country varchar  PK
+pct_wine_consumption Float
+
+wine_data
+-
+description varchar
+designation varchar PK
+points INT
+price Float
+province varchar FK >- provinces.province
+region_1 varchar FK >- regions.region_1
+region_2 varchar FK >-< region_US.region_2
+variety varchar
+winery varchar
+
+countries
+-
+country varchar PK FK - wine_consumption.country
+country_code varchar
+
+provinces
+-
+country varchar FK >- countries.country
+province varchar PK FK >- regions.province
+
+region_US
+-
+region_1_US varchar PK FK - regions.region_1
+region_2 varchar
+
+regions
+-
+region_1 varchar PK
+province varchar 
+
+temperature
+-
+country varchar PK FK - countries.country
+avg_temp float 
+
+
+
