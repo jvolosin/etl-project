@@ -6,7 +6,7 @@
 ## Table of contents
 * [Assignment](#assignment)
 * [Data Sources](#data_sources)
-* [Evaluation](#eval)
+* [Process](#process)
 * [Example Queries](#example_queries)
 * [Conclusions](#conclusions)
 * [References](#ref)
@@ -16,7 +16,7 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 
 ## Data Sources
 
-Wine Data  
+# Wine Data  
 
 	• Data Source: Kaggle (csv file)  
 		○ URL: https://www.kaggle.com/zynicide/wine-reviews?select=winemag-data_first150k.csv  
@@ -37,7 +37,7 @@ Wine Data
 		○ Winery: the winery that made the wine    
 		
 
-Wine Consumption    
+# Wine Consumption     
 	• Data Source: Our World in Data (csv file)      
 		○ URL: https://ourworldindata.org/grapher/wine-as-share-alcohol-consumption      
 		○ Data is from the World Health Organization Global Health Observatory (GHO)      
@@ -52,7 +52,7 @@ Wine Consumption
 				□ Recorded APC is defined as the recorded amount of alcohol consumed per capita (15+ years) over a calendar year in a country, in litres of pure alcohol. The indicator only takes into account the consumption which is recorded from production, import, export, and sales data often via taxation. Numerator: The amount of recorded alcohol consumed per capita (15+ years) during a calendar year, in litres of pure alcohol. Denominator: Midyear resident population (15+ years) for the same calendar year, UN World Population Prospects, medium variant.    
 
 
-Wine Production  
+# Wine Production  
 	• Data Source: World Population Review (csv file)  
 		○ URL: https://worldpopulationreview.com/country-rankings/wine-producing-countries   
 		○ Data is from WorldAtlas  
@@ -64,7 +64,7 @@ Wine Production
 		○ wineProductionGallons: wine production in gallons  
 		○ Pop2020: 2020 population  
 
-Wine Temperature  
+# Wine Temperature  
 	• Data Source: Wikipedia (web scraping)  
 		○ URL: https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature  
 		○ Data is from Lebanese Economy Forum: https://web.archive.org/web/20150905135247/http://lebanese-economy-forum.com/wdi-gdf-advanced-data-display/show/EN-CLC-AVRT-C/  
@@ -73,4 +73,11 @@ Wine Temperature
 	• The data set consists of two columns:  
 		○ Country: the country where the temperature data is from.  
 		○ Avg_temp: average yearly temperature  
-			§ Climate: Average yearly temperature is calculated by averaging the minimum and maximum daily temperatures in the country, averaged for the years 1961-1990, based on gridded climatologies from the Climatic Research Unit.     
+			§ Climate: Average yearly temperature is calculated by averaging the minimum and maximum daily temperatures in the country, averaged for the years 1961-1990, based on gridded climatologies from the Climatic Research Unit.  
+
+## Process  
+        Our process consisted of first browsing the web for data. We looked for different types of sources that were either csvs to download, JSONs, APIs, or web scraping options. We considered using a weather API and a wine API. We also considered using a few different web scraping options. In the end we used csvs and web scraping for our data sources (listed above).  
+        We then converted the web scraping data into csvs in jupyter notebook.     
+        After we had all of our sources available for the project we put together our ERG to see the possible connections and overlap between our different data sources. This was then exported to postgreSQL.  
+        Our next step was to import our data into our "Clean Up" jupyter notebook. After we had all of our data as dataframes the clean up process began.  We checked for duplicate information, dropped rows with irrelevant information and renamed columns to make more sense.  
+           
