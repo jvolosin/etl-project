@@ -35,39 +35,41 @@ Wine Data
 		○ Variety: the type of grapes used to make the wine  
 		○ Winery: the winery that made the wine  
 		
+
 Wine Consumption  
-	• Data Source: Our World in Data (csv file)  
-		○ URL: https://ourworldindata.org/grapher/wine-as-share-alcohol-consumption  
-		○ Data is from the World Health Organization Global Health Observatory (GHO)  
-		○ Time Period: 2010  
-		○ Date Accessed: 12/01/2020  
-	• The data set consists of 3 fields:  
-		○ Entity: the country where the consumption data is from
-		○ Code: country ID
-		○ Indicator:Alcohol, consumption of pure alcohol by type of beverage (%) - Beverage Types:Wine: % of wine consumption
-			§ Recorded alcohol per capita (15+) consumption of pure alcohol is calculated as the sum of beverage-specific alcohol consumption of pure alcohol (beer, wine, spirits, other) from different sources.
+	• Data Source: Our World in Data (csv file)    
+		○ URL: https://ourworldindata.org/grapher/wine-as-share-alcohol-consumption    
+		○ Data is from the World Health Organization Global Health Observatory (GHO)    
+		○ Time Period: 2010    
+		○ Date Accessed: 12/01/2020    
+	• The data set consists of 3 fields:    
+		○ Entity: the country where the consumption data is from  
+		○ Code: country ID  
+		○ Indicator:Alcohol, consumption of pure alcohol by type of beverage (%) - Beverage Types:Wine: % of wine consumption  
+			§ Recorded alcohol per capita (15+) consumption of pure alcohol is calculated as the sum of beverage-specific alcohol consumption of pure alcohol (beer, wine, spirits, other) from different sources.  
 			§ Definition
-				□ Recorded APC is defined as the recorded amount of alcohol consumed per capita (15+ years) over a calendar year in a country, in litres of pure alcohol. The indicator only takes into account the consumption which is recorded from production, import, export, and sales data often via taxation. Numerator: The amount of recorded alcohol consumed per capita (15+ years) during a calendar year, in litres of pure alcohol. Denominator: Midyear resident population (15+ years) for the same calendar year, UN World Population Prospects, medium variant.
+				□ Recorded APC is defined as the recorded amount of alcohol consumed per capita (15+ years) over a calendar year in a country, in litres of pure alcohol. The indicator only takes into account the consumption which is recorded from production, import, export, and sales data often via taxation. Numerator: The amount of recorded alcohol consumed per capita (15+ years) during a calendar year, in litres of pure alcohol. Denominator: Midyear resident population (15+ years) for the same calendar year, UN World Population Prospects, medium variant.  
 
-Wine Production
-	• Data Source: World Population Review (csv file)
-		○ URL: https://worldpopulationreview.com/country-rankings/wine-producing-countries 
-		○ Data is from WorldAtlas
-		○ Time Period: 2020
-		○ Data Accessed: 12/01/2020
-	• The data set consists of 3 fields:
-		○ Country: the country where the production data is from
-		○ wineProduction: wine production in liters
-		○ wineProductionGallons: wine production in gallons
-		○ Pop2020: 2020 population
 
-Wine Temperature
-	• Data Source: Wikipedia (web scraping)
-		○ URL: https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature
-		○ Data is from Lebanese Economy Forum: https://web.archive.org/web/20150905135247/http://lebanese-economy-forum.com/wdi-gdf-advanced-data-display/show/EN-CLC-AVRT-C/
-		○ Time Period: 1961 - 1990
-		○ Data Accessed: 12/03/2020
-	• The data set consists of two columns:
-		○ Country: the country where the temperature data is from.
-		○ Avg_temp: average yearly temperature
-			§ Climate: Average yearly temperature is calculated by averaging the minimum and maximum daily temperatures in the country, averaged for the years 1961-1990, based on gridded climatologies from the Climatic Research Unit.   
+Wine Production  
+	• Data Source: World Population Review (csv file)  
+		○ URL: https://worldpopulationreview.com/country-rankings/wine-producing-countries   
+		○ Data is from WorldAtlas  
+		○ Time Period: 2020  
+		○ Data Accessed: 12/01/2020  
+	• The data set consists of 3 fields:  
+		○ Country: the country where the production data is from  
+		○ wineProduction: wine production in liters  
+		○ wineProductionGallons: wine production in gallons  
+		○ Pop2020: 2020 population  
+
+Wine Temperature  
+	• Data Source: Wikipedia (web scraping)  
+		○ URL: https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature  
+		○ Data is from Lebanese Economy Forum: https://web.archive.org/web/20150905135247/http://lebanese-economy-forum.com/wdi-gdf-advanced-data-display/show/EN-CLC-AVRT-C/  
+		○ Time Period: 1961 - 1990  
+		○ Data Accessed: 12/03/2020  
+	• The data set consists of two columns:  
+		○ Country: the country where the temperature data is from.  
+		○ Avg_temp: average yearly temperature  
+			§ Climate: Average yearly temperature is calculated by averaging the minimum and maximum daily temperatures in the country, averaged for the years 1961-1990, based on gridded climatologies from the Climatic Research Unit.     
