@@ -7,6 +7,7 @@
 * [Assignment](#assignment)
 * [Data Sources](#data_sources)
 * [Evaluation](#eval)
+* [Example Queries](#example_queries)
 * [Conclusions](#conclusions)
 * [References](#ref)
 
@@ -17,7 +18,7 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 
 Wine Data  
 
-	Data Source: Kaggle (csv file)  
+	• Data Source: Kaggle (csv file)  
 		○ URL: https://www.kaggle.com/zynicide/wine-reviews?select=winemag-data_first150k.csv  
 		○ Data was scraped from WineEnthusiast (https://www.winemag.com/?s=&drink_type=wine) as of 06/15/2017.  
 		○ Date Accessed: 11/24/2020  
@@ -33,22 +34,22 @@ Wine Data
 		○ Region 2: sometimes there are more specific regions specified within a wine growing area (ie Rutherford inside the Napa Valley), but this value can sometimes be blank  
 		○ Title: the title of the wine review, which often contains the vintage if you're interested in extracting that feature  
 		○ Variety: the type of grapes used to make the wine  
-		○ Winery: the winery that made the wine  
+		○ Winery: the winery that made the wine    
 		
 
-Wine Consumption  
-	• Data Source: Our World in Data (csv file)    
-		○ URL: https://ourworldindata.org/grapher/wine-as-share-alcohol-consumption    
-		○ Data is from the World Health Organization Global Health Observatory (GHO)    
-		○ Time Period: 2010    
-		○ Date Accessed: 12/01/2020    
-	• The data set consists of 3 fields:    
-		○ Entity: the country where the consumption data is from  
-		○ Code: country ID  
-		○ Indicator:Alcohol, consumption of pure alcohol by type of beverage (%) - Beverage Types:Wine: % of wine consumption  
-			§ Recorded alcohol per capita (15+) consumption of pure alcohol is calculated as the sum of beverage-specific alcohol consumption of pure alcohol (beer, wine, spirits, other) from different sources.  
+Wine Consumption    
+	• Data Source: Our World in Data (csv file)      
+		○ URL: https://ourworldindata.org/grapher/wine-as-share-alcohol-consumption      
+		○ Data is from the World Health Organization Global Health Observatory (GHO)      
+		○ Time Period: 2010      
+		○ Date Accessed: 12/01/2020      
+	• The data set consists of 3 fields:      
+		○ Entity: the country where the consumption data is from    
+		○ Code: country ID    
+		○ Indicator:Alcohol, consumption of pure alcohol by type of beverage (%) - Beverage Types:Wine: % of wine consumption    
+			§ Recorded alcohol per capita (15+) consumption of pure alcohol is calculated as the sum of beverage-specific alcohol consumption of pure alcohol (beer, wine, spirits, other) from different sources.    
 			§ Definition
-				□ Recorded APC is defined as the recorded amount of alcohol consumed per capita (15+ years) over a calendar year in a country, in litres of pure alcohol. The indicator only takes into account the consumption which is recorded from production, import, export, and sales data often via taxation. Numerator: The amount of recorded alcohol consumed per capita (15+ years) during a calendar year, in litres of pure alcohol. Denominator: Midyear resident population (15+ years) for the same calendar year, UN World Population Prospects, medium variant.  
+				□ Recorded APC is defined as the recorded amount of alcohol consumed per capita (15+ years) over a calendar year in a country, in litres of pure alcohol. The indicator only takes into account the consumption which is recorded from production, import, export, and sales data often via taxation. Numerator: The amount of recorded alcohol consumed per capita (15+ years) during a calendar year, in litres of pure alcohol. Denominator: Midyear resident population (15+ years) for the same calendar year, UN World Population Prospects, medium variant.    
 
 
 Wine Production  
