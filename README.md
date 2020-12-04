@@ -15,32 +15,33 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 
 ## Data Sources
 
-Wine Data
-	• Data Source: Kaggle (csv file)
-		○ URL: https://www.kaggle.com/zynicide/wine-reviews?select=winemag-data_first150k.csv
-		○ Data was scraped from WineEnthusiast (https://www.winemag.com/?s=&drink_type=wine) as of 06/15/2017.
-		○ Date Accessed: 11/24/2020
-	• The data set consists of 10 fields:
-		○ Unique Primary ID
-		○ Country: the country that the wine is from
-		○ Description: a few sentences from a sommelier describing the wine's taste, smell, look, feel, etc.
-		○ Designation: the vineyard within the winery where the grapes that made the wine are from
-		○ Points: the number of points WineEnthusiast rated the wine on a scale of 1-100
-		○ Price: the cost for a bottle of the wine
-		○ Province: the province or state that the wine is from
-		○ Region 1: the wine growing area in a province or state
-		○ Region 2: sometimes there are more specific regions specified within a wine growing area (ie Rutherford inside the Napa Valley), but this value can sometimes be blank
-		○ Title: the title of the wine review, which often contains the vintage if you're interested in extracting that feature
-		○ Variety: the type of grapes used to make the wine
-		○ Winery: the winery that made the wine
+Wine Data  
+
+	Data Source: Kaggle (csv file)  
+		○ URL: https://www.kaggle.com/zynicide/wine-reviews?select=winemag-data_first150k.csv  
+		○ Data was scraped from WineEnthusiast (https://www.winemag.com/?s=&drink_type=wine) as of 06/15/2017.  
+		○ Date Accessed: 11/24/2020  
+	• The data set consists of 10 fields:  
+		○ Unique Primary ID  
+		○ Country: the country that the wine is from  
+		○ Description: a few sentences from a sommelier describing the wine's taste, smell, look, feel, etc.  
+		○ Designation: the vineyard within the winery where the grapes that made the wine are from  
+		○ Points: the number of points WineEnthusiast rated the wine on a scale of 1-100  
+		○ Price: the cost for a bottle of the wine  
+		○ Province: the province or state that the wine is from  
+		○ Region 1: the wine growing area in a province or state  
+		○ Region 2: sometimes there are more specific regions specified within a wine growing area (ie Rutherford inside the Napa Valley), but this value can sometimes be blank  
+		○ Title: the title of the wine review, which often contains the vintage if you're interested in extracting that feature  
+		○ Variety: the type of grapes used to make the wine  
+		○ Winery: the winery that made the wine  
 		
-Wine Consumption
-	• Data Source: Our World in Data (csv file)
-		○ URL: https://ourworldindata.org/grapher/wine-as-share-alcohol-consumption
-		○ Data is from the World Health Organization Global Health Observatory (GHO)
-		○ Time Period: 2010
-		○ Date Accessed: 12/01/2020
-	• The data set consists of 3 fields:
+Wine Consumption  
+	• Data Source: Our World in Data (csv file)  
+		○ URL: https://ourworldindata.org/grapher/wine-as-share-alcohol-consumption  
+		○ Data is from the World Health Organization Global Health Observatory (GHO)  
+		○ Time Period: 2010  
+		○ Date Accessed: 12/01/2020  
+	• The data set consists of 3 fields:  
 		○ Entity: the country where the consumption data is from
 		○ Code: country ID
 		○ Indicator:Alcohol, consumption of pure alcohol by type of beverage (%) - Beverage Types:Wine: % of wine consumption
