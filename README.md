@@ -80,4 +80,5 @@ This project will demonstrate the ability to gather data, manipulate it, and org
         We then converted the web scraping data into csvs in jupyter notebook.     
         After we had all of our sources available for the project we put together our ERG to see the possible connections and overlap between our different data sources. This was then exported to postgreSQL.  
         Our next step was to import our data into our "Clean Up" jupyter notebook. After we had all of our data as dataframes the clean up process began.  We checked for duplicate information, dropped rows with irrelevant information and renamed columns to make more sense.  
+   ![Title](Images/ETL_ERD_diagram.png)
            
