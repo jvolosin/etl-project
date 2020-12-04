@@ -16,7 +16,7 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 
 ## Data Sources
 
-# Wine Data  
+### Wine Data  
 
 	• Data Source: Kaggle (csv file)  
 		○ URL: https://www.kaggle.com/zynicide/wine-reviews?select=winemag-data_first150k.csv  
@@ -37,7 +37,7 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 		○ Winery: the winery that made the wine    
 		
 
-# Wine Consumption     
+### Wine Consumption     
 	• Data Source: Our World in Data (csv file)      
 		○ URL: https://ourworldindata.org/grapher/wine-as-share-alcohol-consumption      
 		○ Data is from the World Health Organization Global Health Observatory (GHO)      
@@ -52,7 +52,7 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 				□ Recorded APC is defined as the recorded amount of alcohol consumed per capita (15+ years) over a calendar year in a country, in litres of pure alcohol. The indicator only takes into account the consumption which is recorded from production, import, export, and sales data often via taxation. Numerator: The amount of recorded alcohol consumed per capita (15+ years) during a calendar year, in litres of pure alcohol. Denominator: Midyear resident population (15+ years) for the same calendar year, UN World Population Prospects, medium variant.    
 
 
-# Wine Production  
+### Wine Production  
 	• Data Source: World Population Review (csv file)  
 		○ URL: https://worldpopulationreview.com/country-rankings/wine-producing-countries   
 		○ Data is from WorldAtlas  
@@ -64,7 +64,7 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 		○ wineProductionGallons: wine production in gallons  
 		○ Pop2020: 2020 population  
 
-# Wine Temperature  
+### Wine Temperature  
 	• Data Source: Wikipedia (web scraping)  
 		○ URL: https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature  
 		○ Data is from Lebanese Economy Forum: https://web.archive.org/web/20150905135247/http://lebanese-economy-forum.com/wdi-gdf-advanced-data-display/show/EN-CLC-AVRT-C/  
