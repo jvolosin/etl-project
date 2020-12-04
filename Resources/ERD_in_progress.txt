@@ -1,0 +1,20 @@
+wine-production
+-
+country VARCHAR PK
+wine_production_liters INT
+wine_productio_gal INT
+pop2020 float
+
+wine-consumption
+-
+country VARCHAR PK
+country_code VARCHAR
+wine_pct_of_consump
+
+wine-data
+-
+index INT
+country VARCHAR PK
+description VARCHAR
+designation VARCHAR 
+point
