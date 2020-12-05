@@ -16,8 +16,6 @@ CREATE TABLE wine_production (
 	FOREIGN KEY ("country") REFERENCES countries(country)
 );
 
-DROP TABLE regions
-
 CREATE TABLE provinces (
     country VARCHAR(100),
     province VARCHAR(100) PRIMARY KEY NOT NULL,
@@ -35,8 +33,9 @@ CREATE TABLE region_2 (
 );
 
 CREATE TABLE wine_data (
-    description VARCHAR(255),
-    designation VARCHAR(255) PRIMARY KEY NOT NULL,
+    wine_id SERIAL PRIMARY KEY,
+	description VARCHAR(255),
+    designation VARCHAR(255),
     points INT,
     price FLOAT,
     province VARCHAR(100),
