@@ -109,7 +109,17 @@ This project will demonstrate the ability to gather data, manipulate it, and org
        
        We exported our ERG to pgAdmin. Once all of our data was cleaned up we imported it into pgAdmin.  
        We decided to use pgAdmin because of the advantages it provides for potential consumers of the data.  
-       These advantages include open source, largely compliant with SQL standard, good language support for Python, Java, C++ and more.   
+       These advantages include open source, largely compliant with SQL standard, good language support for Python, Java, C++ and more. 
+
+	Table Import Order:
+	1. countries
+	2. wine_consumption
+	3. wine_production
+	4. provinces
+	5. regions
+	6. region_2
+	7. wine_data
+	8. temperature  
          
 
 ![ERG](Images/ERD_diagram.png)  
