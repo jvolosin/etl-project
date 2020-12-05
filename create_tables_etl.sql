@@ -1,12 +1,11 @@
-CREATE TABLE wine_consumption (
-    country VARCHAR(100) PRIMARY KEY NOT NULL,
-    pct_wine_consumption FLOAT
+CREATE TABLE countries (
+    country VARCHAR(100) PRIMARY KEY NOT NULL
 );
 
-CREATE TABLE countries (
+CREATE TABLE wine_consumption (
     country VARCHAR(100) PRIMARY KEY NOT NULL,
-    country_code VARCHAR(4),
-	FOREIGN KEY (country) REFERENCES wine_consumption(country)
+    pct_wine_consumption FLOAT,
+	FOREIGN KEY (country) REFERENCES countries(country)
 );
 
 CREATE TABLE wine_production (
@@ -23,8 +22,8 @@ CREATE TABLE provinces (
 );
 
 CREATE TABLE regions (
-    region_1 VARCHAR(100) PRIMARY KEY NOT NULL,
     province VARCHAR(100), 
+	region_1 VARCHAR(100) PRIMARY KEY NOT NULL,
 	FOREIGN KEY (province) REFERENCES provinces(province)
 );
 
@@ -33,9 +32,9 @@ CREATE TABLE region_2 (
 );
 
 CREATE TABLE wine_data (
-    wine_id SERIAL PRIMARY KEY,
-	description VARCHAR(255),
-    designation VARCHAR(255),
+    wine_id INT PRIMARY KEY,
+	description VARCHAR,
+    designation VARCHAR,
     points INT,
     price FLOAT,
     province VARCHAR(100),
@@ -50,6 +49,6 @@ CREATE TABLE wine_data (
 
 CREATE TABLE temperature (
     country VARCHAR(100) PRIMARY KEY NOT NULL,
-    avg_temp FLOAT,
+    avg_temp VARCHAR(10),
 	FOREIGN KEY (country) REFERENCES countries(country)
 );
