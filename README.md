@@ -84,7 +84,7 @@ This project will demonstrate the ability to gather data, manipulate it, and org
         Once all of our data was cleaned up we imported it into postgreSQL.  
          
 
-![Title](Images/ERD_diagram.png)  
+![ERG](Images/ERD_diagram.png)  
 
 ## Database Steps  
         • Dependencies: from splinter import Browser  
