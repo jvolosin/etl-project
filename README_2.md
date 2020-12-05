@@ -26,15 +26,15 @@ URL: https://statpedia.com/stat/Average_Yearly_Temperature_by_Country/HJd7OcGK
 We had to use BeautifulSoup, splinter, and other dependencies to parse through the retrieve our specific data.
 
 
-[Dependencies](https://github.com/jvolosin/etl-project/blob/data/Images/img_2.png)
+![Dependencies](https://github.com/jvolosin/etl-project/blob/data/Images/img_2.png)
 Our next point of call is to identify the class handler to list the country and temperatures to determine its effects on wine production.
 
-[Find.all query](https://github.com/jvolosin/etl-project/blob/data/Images/img_3.png)
+![Find.all query](https://github.com/jvolosin/etl-project/blob/data/Images/img_3.png)
 
 
 We then print out the list of countries and their associated temperatures associated with it and export the data to HTML.
 
-[List and HTML table export](https://github.com/jvolosin/etl-project/blob/data/Images/img_4.png)
+![List and HTML table export](https://github.com/jvolosin/etl-project/blob/data/Images/img_4.png)
 
 
 We noticed that the scraped data was incomplete, and it did not scrape data from the page that was not scrolled. Our challenge was to get our dependencies to scroll the page and scrape the data
