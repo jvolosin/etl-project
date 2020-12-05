@@ -1,6 +1,10 @@
 # Happy Hour
 ## ETL Group Project
 
+Members: Kasey Lacerda, Kinnari Patel, Jessi Volosin, Bill Roll, and Joe Atemkuh
+
+Wine time! If you want to know all about wine, you've come to the right place! For our project we have gathered different data sources about wine that includes information like the vineyard it comes from, country, consumption, production, temperature and more!
+
 ![Title](Images/hh1.png)
 
 ## Table of contents
@@ -9,7 +13,7 @@
 * [Process](#process)
 * [Database Steps](#database_steps)
 * [Example Queries](#example_queries)
-* [Conclusions](#conclusions)
+
 
 
 ## Assignment
@@ -77,11 +81,26 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 			§ Climate: Average yearly temperature is calculated by averaging the minimum and maximum daily temperatures in the country, averaged for the years 1961-1990, based on gridded climatologies from the Climatic Research Unit.  
 
 ## Process  
+   ### Extract  
+
         Our process consisted of first browsing the web for data. We looked for different types of sources that were either csvs to download, JSONs, APIs, or web scraping options. We considered using a weather API and a wine API. We also considered using a few different web scraping options. In the end we used csvs and web scraping for our data sources (listed above).  
-        We then converted the web scraping data into csvs in jupyter notebook. Country_temperature jupyter notebook used for importing csvs and completing the web scraping process.     
-        After we had all of our sources available for the project we put together our ERG to see the possible connections and overlap between our different data sources. This was then exported to postgreSQL.  
-        Our next step was to import our data into our "Clean Up" jupyter notebook. Final_wine_tables jupyter notebook used for cleanup process. After we had all of our data as dataframes the clean up process began.  We checked for duplicate information, dropped rows with irrelevant information and renamed columns to make more sense.  
-        Once all of our data was cleaned up we imported it into postgreSQL.  
+        To view the full code used for extraction see Country_temperature jupyter notebook.  
+![Web Scraping Code](Images/web_scraping_code.png)  
+
+   ### Transform  
+  
+        We then converted the web scraping data into csvs in jupyter notebook.      
+        After we had all of our sources available for the project we put together our ERG to see the possible connections and overlap between our different data sources.   
+        Our next step was to import our data into our "Clean Up" jupyter notebook. After we had all of our data as dataframes the clean up process began.  We checked for duplicate information, dropped rows with irrelevant information and renamed columns to make more sense. To view the full code used for the transformation see Final_tables jupyter notebook.  
+
+![Clean Up](clean_up.png)   
+          
+  
+   ### Load  
+       
+       We exported our ERG to pgAdmin. Once all of our data was cleaned up we imported it into pgAdmin.  
+       We decided to use pgAdmin because of the advantages it provides for potential consumers of the data.  
+       These advantages include open source, largely compliant with SQL standard, good language support for Python, Java, C++ and more.   
          
 
 ![ERG](Images/ERD_diagram.png)  
@@ -95,13 +114,12 @@ This project will demonstrate the ability to gather data, manipulate it, and org
                         from selenium import webdriver  
                         from webdriver_manager.chrome import ChromeDriverManager  
         • Configurations:  
-        • Is Chrome needed? 
+        • Is Chrome needed? Yes
         • What files to run in what order: 
        
 
 ## Example Queries  
-
-## Conclusions  
+  
 
 
    
