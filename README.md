@@ -7,9 +7,10 @@
 * [Assignment](#assignment)
 * [Data Sources](#data_sources)
 * [Process](#process)
+* [Database Steps](#database_steps)
 * [Example Queries](#example_queries)
 * [Conclusions](#conclusions)
-* [References](#ref)
+
 
 ## Assignment
 This project will demonstrate the ability to gather data, manipulate it, and organize it in into a database. This project does **not** include any data analysis. The purpose of this project is to create a well ordered, useful database that could be utilized by an organization. Databases resulting from ETL are often the starting point for an organization's data analysis.
@@ -82,7 +83,26 @@ This project will demonstrate the ability to gather data, manipulate it, and org
         Our next step was to import our data into our "Clean Up" jupyter notebook. After we had all of our data as dataframes the clean up process began.  We checked for duplicate information, dropped rows with irrelevant information and renamed columns to make more sense.  
         Once all of our data was cleaned up we imported it into postgreSQL.  
 
+
 ![Title](Images/ERD_diagram.png)  
+
+## Database Steps  
+        • Dependencies: from splinter import Browser  
+                        from bs4 import BeautifulSoup  
+                        import pandas as pd  
+                        import numpy as np  
+                        import time  
+                        from selenium import webdriver  
+                        from webdriver_manager.chrome import ChromeDriverManager  
+        • Configurations:  
+        • Is Chrome needed? 
+        • What files to run in what order: 
+       
+
+## Example Queries  
+
+## Conclusions  
+
 
    
            
