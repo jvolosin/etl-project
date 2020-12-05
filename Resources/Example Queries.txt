@@ -1,12 +1,13 @@
 Example Queries:
-	1. Customer is interested in the price differences and variety available for wines in different regions located in California.
+	1. Customer is interested in the price differences for the varieties available for wines located in California.
 		a. --
-		SELECT AVG(wine.price) AS Avg_Wine_Price
-			,wine.variety AS Wine_Variety
-			,wine.province AS Wine_Province
-			,regions.region_1 AS Region
-		FROM wine_data AS wine
-		INNER JOIN regions ON regions.province = wine.province
+	SELECT AVG(wine.price) AS Avg_Wine_Price
+		,wine.variety AS Wine_Variety
+		,wine.province AS Wine_Province
+	FROM wine_data AS wine 
+	INNER JOIN regions ON regions.province = wine.province
+		WHERE wine.province ='California'
+		GROUP BY wine.variety, wine.province;
 			
 			
 	2. Distributor is interested in the effect weather has on the price of wines from different countries.
