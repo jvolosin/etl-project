@@ -92,7 +92,7 @@ This project will demonstrate the ability to gather data, manipulate it, and org
    ### Extract  
 
         Our process consisted of first browsing the web for data. We looked for different types of sources that were either csvs to download, JSONs, APIs, or web scraping options. We considered using a weather API and a wine API. We also considered using a few different web scraping options. One of those options was to look at wine and cheese pairings but we found in our research that csvs tend to contain much larger sets of data than what you can get by scraping the web. Web scraping for temperature ended up being our best option. In the end we used csvs and web scraping for our data sources (listed above).  
-        To view the full code used for extraction see Country_temperature jupyter notebook.  
+        To view the full code used for extraction see temperature_web_scraping jupyter notebook.  
 
 ![Scraping](Images/web_scraping_code.JPG)  
 
@@ -100,7 +100,7 @@ This project will demonstrate the ability to gather data, manipulate it, and org
   
         We then converted the web scraping data into csvs in jupyter notebook.      
         After we had all of our sources available for the project we put together our ERG to see the possible connections and overlap between our different data sources.   
-        Our next step was to import our data into our "Clean Up" jupyter notebook. After we had all of our data as dataframes the clean up process began.  We checked for duplicate information, dropped rows with irrelevant information and renamed columns to make more sense. To view the full code used for the transformation see Final_tables jupyter notebook.  
+        Our next step was to import our data into our clean_transform jupyter notebook. After we had all of our data as dataframes the clean up process began.  We checked for duplicate information, dropped rows with irrelevant information and renamed columns to make more sense. To view the full code used for the transformation see Final_tables jupyter notebook.  
 
 ![Clean](Images/clean_up.PNG)   
           
@@ -122,7 +122,7 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 	8. temperature  
          
 
-![ERG](Images/ERD_diagram.png)  
+![ERG](ERD_diagram_final.png)  
 
 ## Database Steps  
         • Dependencies: from splinter import Browser  
