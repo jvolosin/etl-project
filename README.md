@@ -93,7 +93,7 @@ This project will demonstrate the ability to gather data, manipulate it, and org
         After we had all of our sources available for the project we put together our ERG to see the possible connections and overlap between our different data sources.   
         Our next step was to import our data into our "Clean Up" jupyter notebook. After we had all of our data as dataframes the clean up process began.  We checked for duplicate information, dropped rows with irrelevant information and renamed columns to make more sense. To view the full code used for the transformation see Final_tables jupyter notebook.  
 
-![Clean Up](clean_up.png)   
+![Clean Up](Images/clean_up.png)   
           
   
    ### Load  
