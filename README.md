@@ -78,11 +78,11 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 
 ## Process  
         Our process consisted of first browsing the web for data. We looked for different types of sources that were either csvs to download, JSONs, APIs, or web scraping options. We considered using a weather API and a wine API. We also considered using a few different web scraping options. In the end we used csvs and web scraping for our data sources (listed above).  
-        We then converted the web scraping data into csvs in jupyter notebook.     
+        We then converted the web scraping data into csvs in jupyter notebook. Country_temperature jupyter notebook used for importing csvs and completing the web scraping process.     
         After we had all of our sources available for the project we put together our ERG to see the possible connections and overlap between our different data sources. This was then exported to postgreSQL.  
-        Our next step was to import our data into our "Clean Up" jupyter notebook. After we had all of our data as dataframes the clean up process began.  We checked for duplicate information, dropped rows with irrelevant information and renamed columns to make more sense.  
+        Our next step was to import our data into our "Clean Up" jupyter notebook. Final_wine_tables jupyter notebook used for cleanup process. After we had all of our data as dataframes the clean up process began.  We checked for duplicate information, dropped rows with irrelevant information and renamed columns to make more sense.  
         Once all of our data was cleaned up we imported it into postgreSQL.  
-
+         
 
 ![Title](Images/ERD_diagram.png)  
 
