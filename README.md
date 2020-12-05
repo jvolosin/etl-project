@@ -1,70 +1,127 @@
-# etl-project 
+# Happy Hour
+## ETL Group Project
 
-Happy Hour - Link to Project Proposal: 
+Members: Kasey Lacerda, Kinnari Patel, Jessi Volosin, Bill Roll, and Joe Atemkuh
 
-https://docs.google.com/document/d/17fL7fj5vVrmMfuptqBkofTThfss-MIlssyCy2H1bldw/edit?usp=sharing 
+Wine time! If you want to know all about wine, you've come to the right place! For our project we have gathered different data sources about wine that includes information like the vineyard it comes from, country, consumption, production, temperature and more!
 
-Rutgers Data Science Bootcamp ETL Project Repo
+![Title](Images/hh1.png)
 
-Your project proposal should contain the following:
+## Table of contents
+* [Assignment](#assignment)
+* [Data Sources](#data_sources)
+* [Process](#process)
+* [Database Steps](#database_steps)
+* [Example Queries](#example_queries)
 
-* A brief description of your final database
-* Why your final database will be useful to a hypothetical organization
-* A list your data sources
-* A brief sumarry of the three ETL steps you will take to create this database
-* A description of what each team member will be responsible for
 
-Take advantage of your Instructor and TA support during office hours and class project work time. They are a valuable resource and can help you stay on track.
 
-#### **Project Work**
+## Assignment
+This project will demonstrate the ability to gather data, manipulate it, and organize it in into a database. This project does **not** include any data analysis. The purpose of this project is to create a well ordered, useful database that could be utilized by an organization. Databases resulting from ETL are often the starting point for an organization's data analysis.
 
-After you have received approval for your project proposal, perform ETL on the data. Make sure to plan and document the following:
+## Data Sources
 
-* The sources of data that you will extract from.
-* The type of transformation needed for this data (cleaning, joining, filtering, aggregating, etc).
-* The type of final production database to load the data into (PostgreSQL, MongoDB or SQLite).
-* The final tables or collections that will be used in the production database.
+### Wine Data  
 
-You will be required to submit a final technical report with the above information and steps required to reproduce your ETL process.
+	• Data Source: Kaggle (csv file)  
+		○ URL: https://www.kaggle.com/zynicide/wine-reviews?select=winemag-data_first150k.csv  
+		○ Data was scraped from WineEnthusiast (https://www.winemag.com/?s=&drink_type=wine) as of 06/15/2017.  
+		○ Date Accessed: 11/24/2020  
+	• The data set consists of 10 fields:  
+		○ Unique Primary ID  
+		○ Country: the country that the wine is from  
+		○ Description: a few sentences from a sommelier describing the wine's taste, smell, look, feel, etc.  
+		○ Designation: the vineyard within the winery where the grapes that made the wine are from  
+		○ Points: the number of points WineEnthusiast rated the wine on a scale of 1-100  
+		○ Price: the cost for a bottle of the wine  
+		○ Province: the province or state that the wine is from  
+		○ Region 1: the wine growing area in a province or state  
+		○ Region 2: sometimes there are more specific regions specified within a wine growing area (ie Rutherford inside the Napa Valley), but this value can sometimes be blank  
+		○ Title: the title of the wine review, which often contains the vintage if you're interested in extracting that feature  
+		○ Variety: the type of grapes used to make the wine  
+		○ Winery: the winery that made the wine    
+		
 
-#### README - Project Report
+### Wine Consumption     
+	• Data Source: Our World in Data (csv file)      
+		○ URL: https://ourworldindata.org/grapher/wine-as-share-alcohol-consumption      
+		○ Data is from the World Health Organization Global Health Observatory (GHO)      
+		○ Time Period: 2010      
+		○ Date Accessed: 12/01/2020      
+	• The data set consists of 3 fields:      
+		○ Entity: the country where the consumption data is from    
+		○ Code: country ID    
+		○ Indicator:Alcohol, consumption of pure alcohol by type of beverage (%) - Beverage Types:Wine: % of wine consumption    
+			§ Recorded alcohol per capita (15+) consumption of pure alcohol is calculated as the sum of beverage-specific alcohol consumption of pure alcohol (beer, wine, spirits, other) from different sources.    
+			§ Definition
+				□ Recorded APC is defined as the recorded amount of alcohol consumed per capita (15+ years) over a calendar year in a country, in litres of pure alcohol. The indicator only takes into account the consumption which is recorded from production, import, export, and sales data often via taxation. Numerator: The amount of recorded alcohol consumed per capita (15+ years) during a calendar year, in litres of pure alcohol. Denominator: Midyear resident population (15+ years) for the same calendar year, UN World Population Prospects, medium variant.    
 
-There is no presentation for this project. Instead, your grade will be based on your GitHub's README. Your README must include, at a minimum:
 
-* Your ETL process:
-	* **E**xtract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc).
-	* **T**ransform: what data cleaning or transformation was required.
-	* **L**oad: the final database, tables/collections, and why this was chosen.
+### Wine Production  
+	• Data Source: World Population Review (csv file)  
+		○ URL: https://worldpopulationreview.com/country-rankings/wine-producing-countries   
+		○ Data is from WorldAtlas  
+		○ Time Period: 2020  
+		○ Data Accessed: 12/01/2020  
+	• The data set consists of 3 fields:  
+		○ Country: the country where the production data is from  
+		○ wineProduction: wine production in liters  
+		○ wineProductionGallons: wine production in gallons  
+		○ Pop2020: 2020 population  
 
-* All necessary steps to recreate your database when someone clone's your repository.
-  * What dependencies are needed to run the code?
-  * What configurations must be made? for PC? for Mac?
-  * Is Chrome needed?
-  * What files to run in what order?
-  * Think of the instructional team as a bunch of toddlers who need step-by-step instructions.
+### Wine Temperature  
+	• Data Source: Wikipedia (web scraping)  
+		○ URL: https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature  
+		○ Data is from Lebanese Economy Forum: https://web.archive.org/web/20150905135247/http://lebanese-economy-forum.com/wdi-gdf-advanced-data-display/show/EN-CLC-AVRT-C/  
+		○ Time Period: 1961 - 1990  
+		○ Data Accessed: 12/03/2020  
+	• The data set consists of two columns:  
+		○ Country: the country where the temperature data is from.  
+		○ Avg_temp: average yearly temperature  
+			§ Climate: Average yearly temperature is calculated by averaging the minimum and maximum daily temperatures in the country, averaged for the years 1961-1990, based on gridded climatologies from the Climatic Research Unit.  
 
-#### **Team Effort**
+## Process  
+  
+   ### Extract  
 
-Due to the short timeline, teamwork will be crucial to the success of this project! Work closely with your team through all phases of the project to ensure that there are no surprises at the end of the week.
+        Our process consisted of first browsing the web for data. We looked for different types of sources that were either csvs to download, JSONs, APIs, or web scraping options. We considered using a weather API and a wine API. We also considered using a few different web scraping options. In the end we used csvs and web scraping for our data sources (listed above).  
+        To view the full code used for extraction see Country_temperature jupyter notebook.  
+![Scraping](Images/web_scraping_code.PNG)  
 
-Working in a group enables you to tackle more difficult problems than you'd be able to working alone. In other words, working in a group allows you to **work smart** and **dream big**. Take advantage of it!
+   ### Transform  
+  
+        We then converted the web scraping data into csvs in jupyter notebook.      
+        After we had all of our sources available for the project we put together our ERG to see the possible connections and overlap between our different data sources.   
+        Our next step was to import our data into our "Clean Up" jupyter notebook. After we had all of our data as dataframes the clean up process began.  We checked for duplicate information, dropped rows with irrelevant information and renamed columns to make more sense. To view the full code used for the transformation see Final_tables jupyter notebook.  
 
-## Project Requirements
+![Clean](Images/clean_up.PNG)   
+          
+  
+   ### Load  
+       
+       We exported our ERG to pgAdmin. Once all of our data was cleaned up we imported it into pgAdmin.  
+       We decided to use pgAdmin because of the advantages it provides for potential consumers of the data.  
+       These advantages include open source, largely compliant with SQL standard, good language support for Python, Java, C++ and more.   
+         
 
-* Your project must use 2 or more sources of data. At least one data source **cannot** be a CSV. The following sites may be good sources of data [data.world](https://data.world/) and  [Kaggle](https://www.kaggle.com/).
+![ERG](Images/ERD_diagram.png)  
 
-* You will create a well organized PostgreSQL, MongoDB or SQLite database. You must include the reasoning for which type of database in your README.
+## Database Steps  
+        • Dependencies: from splinter import Browser  
+                        from bs4 import BeautifulSoup  
+                        import pandas as pd  
+                        import numpy as np  
+                        import time  
+                        from selenium import webdriver  
+                        from webdriver_manager.chrome import ChromeDriverManager  
+        • Configurations:  
+        • Is Chrome needed? Yes
+        • What files to run in what order: 
+       
 
-* You must include an erd for a SQL database or a schema for the collection(s) in a MongoDB (ask the instructional staff if you need help).
+## Example Queries  
+  
 
-* You should include example queries that a user could make of your database, demonstrating your use case.
 
-* You must include a comprehensive README detailing your work throughout the three phases of ETL and instructions on how to recreate your process.
- 
-* Each member of the team is required to make **at least** 20 commits to GitHub.
-
-* **BONUS** 
-  Share your database with the instructional staff by uploading a SQLite database to GitHub or hosting a MongoDB or PostgreSQL database on AWS or Heroku.
-
-* **BONUS** 
-  Create a Web API using Flask in an app.py file with at least 2 routes to illustrate how you would serve data from your database to users over the web.
+   
+           
