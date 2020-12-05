@@ -16,7 +16,7 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 
 ## Data Sources
 
-In our first try, our goal was to scrape data temperatures from this site
+In our first try, our goal was to scrape data temperatures from this site. 
 URL: https://statpedia.com/stat/Average_Yearly_Temperature_by_Country/HJd7OcGK
 
 
