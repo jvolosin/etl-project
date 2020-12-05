@@ -20,20 +20,20 @@ In our first try, our goal was to scrape data temperatures from this site
 URL: https://statpedia.com/stat/Average_Yearly_Temperature_by_Country/HJd7OcGK
 
 
-[statpedia](Images/img_1.jpg)
+[statpedia](https://github.com/jvolosin/etl-project/blob/data/Images/img_1.jpg) 
 
 We had to use BeautifulSoup, splinter, and other dependencies to parse through the retrieve our specific data.
 
 
-[Dependencies](Images/img_2.jpg)
+[Dependencies](https://github.com/jvolosin/etl-project/blob/data/Images/img_2.jpg)
 Our next point of call is to identify the class handler to list the country and temperatures to determine its effects on wine production.
 
-[Find.all query](Images/img_3.jpg)
+[Find.all query](https://github.com/jvolosin/etl-project/blob/data/Images/img_3.jpg)
 
 
 We then print out the list of countries and their associated temperatures associated with it and export the data to HTML.
 
-[List and HTML table export](Images/img_4.jpg)
+[List and HTML table export](https://github.com/jvolosin/etl-project/blob/data/Images/img_4.jpg)
 
 
 We noticed that the scraped data was incomplete, and it did not scrape data from the page that was not scrolled. Our challenge was to get our dependencies to scroll the page and scrape the data
