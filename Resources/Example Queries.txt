@@ -1,6 +1,6 @@
 Example Queries:
 	1. Customer is interested in the price differences for the varieties available for wines located in California.
-		a. --
+
 	SELECT AVG(wine.price) AS Avg_Wine_Price
 		,wine.variety AS Wine_Variety
 		,wine.province AS Wine_Province
@@ -9,26 +9,28 @@ Example Queries:
 		WHERE wine.province ='California'
 		GROUP BY wine.variety, wine.province;
 			
-			
-	2. Distributor is interested in the effect weather has on the price of wines from different countries.
-	3. Health Officials are interested in the effects weather has on the consumption volume of wine. 
-	4. Distributor is interested in the average overall score of wines produced in each country.  
+	2. Distributor is interested in the average overall score of wines produced in each country. 
+ 
+	SELECT AVG(wine.points) AS Avg_Wine_Score
+		,provinces.country AS Country
+	FROM wine_data AS wine
+	INNER JOIN provinces ON provinces.province = wine.province
+		GROUP BY provinces.country;
 
 
-
-        5. Find wine with a score of 96
+        3. Find wine with a score of 96
 
 	        SELECT points
                 FROM wine-data
                 WHERE points = 96;
 
-        6. Find countries with 0 wine consumption
+        4. Find countries with 0 wine consumption
 
                 SELECT pct_wine_consumption
                 FROM wine-consumption
                 WHERE pct_wine_consumption = 0;
 
-        7. Find the % wine consumption for countries that produce over 700,000 liters
+        5. Find the % wine consumption for countries that produce over 700,000 liters
 
                 SELECT pct_wine_consumption
                 FROM wine-consumption
