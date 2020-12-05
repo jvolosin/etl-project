@@ -91,10 +91,10 @@ This project will demonstrate the ability to gather data, manipulate it, and org
   
    ### Extract  
 
-        Our process consisted of first browsing the web for data. We looked for different types of sources that were either csvs to download, JSONs, APIs, or web scraping options. We considered using a weather API and a wine API. We also considered using a few different web scraping options. In the end we used csvs and web scraping for our data sources (listed above).  
+        Our process consisted of first browsing the web for data. We looked for different types of sources that were either csvs to download, JSONs, APIs, or web scraping options. We considered using a weather API and a wine API. We also considered using a few different web scraping options. One of those options was to look at wine and cheese pairings but we found in our research that csvs tend to contain much larger sets of data than what you can get by scraping the web. Web scraping for temperature ended up being our best option. In the end we used csvs and web scraping for our data sources (listed above).  
         To view the full code used for extraction see Country_temperature jupyter notebook.  
 
-![Scraping](Images/web_scraping_code.PNG)  
+![Scraping](Images/web_scraping_code.JPG)  
 
    ### Transform  
   
