@@ -17,7 +17,7 @@ Example Queries:
 	INNER JOIN provinces ON provinces.province = wine.province
 		GROUP BY provinces.country;
 
-        5. Find the % wine consumption and production levels for all countries
+        3. Find the % wine consumption and production levels for all countries
 
 	SELECT wine_consumption.country AS Country
 		,wine_consumption.pct_wine_consumption AS Pct_Wine_Consumed
