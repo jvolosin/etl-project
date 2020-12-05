@@ -1,7 +1,7 @@
 # etl-project
 Rutgers Data Science Bootcamp ETL Project Repo
 
-Kinnari Patel
+Kinnari Patel worked on to compare data
 
 1)wine-cheese.csv was created by web-scraping but not used due to lack of data.
 2)wine-aging.csv was created by web-scraping but not used due to lack of data.
