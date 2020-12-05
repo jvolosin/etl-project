@@ -17,26 +17,10 @@ Example Queries:
 	INNER JOIN provinces ON provinces.province = wine.province
 		GROUP BY provinces.country;
 
+        5. Find the % wine consumption and production levels for all countries
 
-        3. Find wine with a score of 96
-
-	        SELECT points
-                FROM wine-data
-                WHERE points = 96;
-
-        4. Find countries with 0 wine consumption
-
-                SELECT pct_wine_consumption
-                FROM wine-consumption
-                WHERE pct_wine_consumption = 0;
-
-        5. Find the % wine consumption for countries that produce over 700,000 liters
-
-                SELECT pct_wine_consumption
-                FROM wine-consumption
-                WHERE pct_wine_consumption IN
-	            (
-		      SELECT wineProduction
-		      FROM wine-production
-		      WHERE wineProduction > 700,000
-	            )
+	SELECT wine_consumption.country AS Country
+		,wine_consumption.pct_wine_consumption AS Pct_Wine_Consumed
+		,wine_production.volume AS Volume_Wine_Produced
+	FROM wine_consumption
+	INNER JOIN wine_production ON wine_production.country = wine_consumption.country;
