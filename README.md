@@ -24,12 +24,14 @@ Wine time! If you want to know all about wine, you've come to the right place! F
 
 
 ## Assignment
-This project will demonstrate the ability to gather data, manipulate it, and organize it in into a database. This project does **not** include any data analysis. The purpose of this project is to create a well ordered, useful database that could be utilized by an organization. Databases resulting from ETL are often the starting point for an organization's data analysis.
+The IMDB of Wine will allow users to gather interesting data on various wines from around the world, including countries of origin and weather. To accomplish this, we sought out data from different sources and combined them using extract, data and load (ETL) procedures for a clean and efficient databae.  
 
 ## Data Sources
 
-### Wine Data  
+Our data sources can be found in the Resources folder, here:  https://github.com/jvolosin/etl-project/tree/main/Resources 
 
+### Wine Data  
+	• Filename: wine-data.csv
 	• Data Source: Kaggle (csv file)  
 		○ URL: https://www.kaggle.com/zynicide/wine-reviews?select=winemag-data_first150k.csv  
 		○ Data was scraped from WineEnthusiast (https://www.winemag.com/?s=&drink_type=wine) as of 06/15/2017.  
@@ -43,13 +45,15 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 		○ Price: the cost for a bottle of the wine  
 		○ Province: the province or state that the wine is from  
 		○ Region 1: the wine growing area in a province or state  
-		○ Region 2: sometimes there are more specific regions specified within a wine growing area (ie Rutherford inside the Napa Valley), but this value can sometimes be blank  
+		○ Region 2: sometimes there are more specific regions specified within a wine growing area (ie Rutherford inside the Napa Valley), 
+			but this value can sometimes be blank  
 		○ Title: the title of the wine review, which often contains the vintage if you're interested in extracting that feature  
 		○ Variety: the type of grapes used to make the wine  
 		○ Winery: the winery that made the wine    
 		
 
 ### Wine Consumption     
+	• Filename: wine-consumption.csv
 	• Data Source: Our World in Data (csv file)      
 		○ URL: https://ourworldindata.org/grapher/wine-as-share-alcohol-consumption      
 		○ Data is from the World Health Organization Global Health Observatory (GHO)      
@@ -59,12 +63,11 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 		○ Entity: the country where the consumption data is from    
 		○ Code: country ID    
 		○ Indicator:Alcohol, consumption of pure alcohol by type of beverage (%) - Beverage Types:Wine: % of wine consumption    
-			§ Recorded alcohol per capita (15+) consumption of pure alcohol is calculated as the sum of beverage-specific alcohol consumption of pure alcohol (beer, wine, spirits, other) from different sources.    
-			§ Definition
-				□ Recorded APC is defined as the recorded amount of alcohol consumed per capita (15+ years) over a calendar year in a country, in litres of pure alcohol. The indicator only takes into account the consumption which is recorded from production, import, export, and sales data often via taxation. Numerator: The amount of recorded alcohol consumed per capita (15+ years) during a calendar year, in litres of pure alcohol. Denominator: Midyear resident population (15+ years) for the same calendar year, UN World Population Prospects, medium variant.    
+			- the percentage of total alchohol consumed that is wine as opposed to other types of alcohol.      
 
 
 ### Wine Production  
+	• Filename: wine-production.csv
 	• Data Source: World Population Review (csv file)  
 		○ URL: https://worldpopulationreview.com/country-rankings/wine-producing-countries   
 		○ Data is from WorldAtlas  
@@ -77,6 +80,7 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 		○ Pop2020: 2020 population  
 
 ### Wine Temperature  
+	• Filename: wine_temperature.csv
 	• Data Source: Wikipedia (web scraping)  
 		○ URL: https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature  
 		○ Data is from Lebanese Economy Forum: https://web.archive.org/web/20150905135247/http://lebanese-economy-forum.com/wdi-gdf-advanced-data-display/show/EN-CLC-AVRT-C/  
@@ -85,61 +89,59 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 	• The data set consists of two columns:  
 		○ Country: the country where the temperature data is from.  
 		○ Avg_temp: average yearly temperature  
-			§ Climate: Average yearly temperature is calculated by averaging the minimum and maximum daily temperatures in the country, averaged for the years 1961-1990, based on gridded climatologies from the Climatic Research Unit.  
+		- Climate: Average yearly temperature is calculated by averaging the minimum and maximum daily temperatures in the country, averaged for the years 1961-1990, 			based on gridded climatologies from the Climatic Research Unit.  
 
 ## Process  
   
    ### Extract  
 
-        Our process consisted of first browsing the web for data. We looked for different types of sources that were either csvs to download, JSONs, APIs, or web scraping options. We considered using a weather API and a wine API. We also considered using a few different web scraping options. One of those options was to look at wine and cheese pairings but we found in our research that csvs tend to contain much larger sets of data than what you can get by scraping the web. Web scraping for temperature ended up being our best option. In the end we used csvs and web scraping for our data sources (listed above).  
-        To view the full code used for extraction see temperature_web_scraping jupyter notebook.  
+        Our process consisted of first browsing the web for data. We looked for different types of sources that were either csvs to download, JSONs, APIs, or web scraping options. We considered using a weather API and a wine API. We also considered using a few different web scraping options. One of those options was to look at wine and cheese pairings. However, we found that these datasets were not large enough to provide usefulness to our dataset. Web scraping for temperature ended up being our best option, which we combined with the csv data files above to create our raw dataset.   
+        To view the full code used for web scraping see temperature_web_scraping jupyter notebook.  
 
 ![Scraping](Images/web_scraping_code.JPG)  
 
    ### Transform  
   
-        We then converted the web scraping data into csvs in jupyter notebook.      
-        After we had all of our sources available for the project we put together our ERG to see the possible connections and overlap between our different data sources.   
-        Our next step was to import our data into our clean_transform jupyter notebook. After we had all of our data as dataframes the clean up process began.  We checked for duplicate information, dropped rows with irrelevant information and renamed columns to make more sense. To view the full code used for the transformation see Final_tables jupyter notebook.  
+        We then converted the web scraping data into csvs in jupyter notebook and design an eneity relationship diagram (ERD) to most efficiently organize our data. We imported all the csvs into pandas as included in our clean_transform jupyter notebook. We compiled a common list of countries from all of our sources, as country was the primary key for several tables.  We checked for duplicate information, fields (e.g countries) requiring renaming), dropped rows with irrelevant information and renamed columns to make more sense. We then exported the data into csvs that would be used to populate the database. To view the full code used for the transformation see Final_tables jupyter notebook.  
 
 ![Clean](Images/clean_up.PNG)   
           
-  
    ### Load  
        
-       We exported our ERG to pgAdmin. Once all of our data was cleaned up we imported it into pgAdmin.  
-       We decided to use pgAdmin because of the advantages it provides for potential consumers of the data.  
-       These advantages include open source, largely compliant with SQL standard, good language support for Python, Java, C++ and more. 
-
-	Table Import Order:
-	1. countries
-	2. wine_consumption
-	3. wine_production
-	4. provinces
-	5. regions
-	6. region_2
-	7. wine_data
-	8. temperature  
-         
+       We exported our ERD to a sql file and formatted it into a create table query to be used in postgresql. We selected postgresql because the type of data lent itself well to SQL format and it can be easily manipulated by the user with simple queries. Advantages of this format  include open source, largely compliant with SQL standard, good language support for Python, Java, C++ and more. We created a database, and once the tables were successfully created we imported the data. Due to foreign keys, the tables had to be imported in a specific order as shown in Database Steps below.      
 
 ![ERG](ERD_diagram_final.png)  
 
 ## Database Steps  
-        • Dependencies: from splinter import Browser  
+        • Python Dependencies: from splinter import Browser  
                         from bs4 import BeautifulSoup  
                         import pandas as pd  
                         import numpy as np  
                         import time  
                         from selenium import webdriver  
                         from webdriver_manager.chrome import ChromeDriverManager  
-        • Configurations: See ERG diagram
+        • Configurations: See ERD diagram
         • Is Chrome needed? Yes
-        • What files to run in what order: See create_tables_etl.sql in GitHub
+        • What files to run in what order: 
+		temperature_web_scraping.ipynb
+		clean_transform.ipynb
+		open pgAdmin4 
+		create database
+		run create table schema:  https://github.com/jvolosin/etl-project/tree/main/Queries/create_tables_etl.sql 
+		File Import Order:
+		1. countries.csv
+		2. wine_consumption.csv
+		3. wine_production.csv
+		4. provinces.csv
+		5. regions.csv
+		6. region_2.csv
+		7. wine_data.csv
+		8. temperature.csv  
        
-
 ## Example Queries  
-       See example queries txt file in GitHub repo
+       See example queries txt file Example_Queries.txt at: https://github.com/jvolosin/etl-project/tree/main/Queries/Example_Queries.txt 
   
+
 
 
    
