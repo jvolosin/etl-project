@@ -35,5 +35,5 @@ Example Queries:
 	            (
 		      SELECT wineProduction
 		      FROM wine-production
-		      WHERE wineproduction > 700,000
+		      WHERE wineProduction > 700,000
 	            )
