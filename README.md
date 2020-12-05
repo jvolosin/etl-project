@@ -1,5 +1,12 @@
 # Happy Hour
 ## ETL Group Project
+By:
+Bill Roll
+Jessi Volosin
+Joseph Atemkuh
+Kasey Lancerda
+Kinnari Patel
+
 
 ![Title](Images/hh1.png)
 
