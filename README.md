@@ -86,6 +86,7 @@ This project will demonstrate the ability to gather data, manipulate it, and org
 
         Our process consisted of first browsing the web for data. We looked for different types of sources that were either csvs to download, JSONs, APIs, or web scraping options. We considered using a weather API and a wine API. We also considered using a few different web scraping options. In the end we used csvs and web scraping for our data sources (listed above).  
         To view the full code used for extraction see Country_temperature jupyter notebook.  
+
 ![Scraping](Images/web_scraping_code.PNG)  
 
    ### Transform  
@@ -114,12 +115,13 @@ This project will demonstrate the ability to gather data, manipulate it, and org
                         import time  
                         from selenium import webdriver  
                         from webdriver_manager.chrome import ChromeDriverManager  
-        • Configurations:  
+        • Configurations: See ERG diagram
         • Is Chrome needed? Yes
-        • What files to run in what order: 
+        • What files to run in what order: See create_tables_etl.sql in GitHub
        
 
 ## Example Queries  
+       See example queries txt file in GitHub repo
   
 
 
