@@ -20,7 +20,8 @@ In our first try, our goal was to scrape data temperatures from this site
 URL: https://statpedia.com/stat/Average_Yearly_Temperature_by_Country/HJd7OcGK
 
 
-[statpedia](https://github.com/jvolosin/etl-project/blob/data/Images/img_1.png) 
+
+![statpedia](https://github.com/jvolosin/etl-project/blob/data/Images/img_1.png) 
 
 We had to use BeautifulSoup, splinter, and other dependencies to parse through the retrieve our specific data.
 
