@@ -80,7 +80,7 @@ Data Source: World Population Review (csv file)
 - Time Period: 2020
 - Data Accessed: 12/01/2020
 
-The data set consists of 3 fields:
+The data set consists of 4 fields:
 - Country: the country where the production data is from
 - wineProduction: wine production in liters
 - wineProductionGallons: wine production in gallons
@@ -94,7 +94,7 @@ Data Source: Wikipedia (web scraping)
 - Data Time Period: 1961 - 1990
 - Data Accessed: 12/03/2020
 
-The data set consists of two columns:
+The data set consists of 2 fields:
 - Country: the country where the temperature data is from.
 - Average Yearly Temperature   
 
@@ -148,23 +148,23 @@ The steps to create and execute the IMDB of Wine database are below:
 
 1. Python Dependencies: 
 
-from splinter import Browser
-from bs4 import BeautifulSoup
-import pandas as pd
-import numpy as np
-import time
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
+- from splinter import Browser
+- from bs4 import BeautifulSoup
+- import pandas as pd
+- import numpy as np
+- import time
+- from selenium import webdriver
+- from webdriver_manager.chrome import ChromeDriverManager
 
 2. Database configuration: See ERD diagram
 3. Is Chrome needed? Yes
-4. What files to run in what order:
+4. Run files in the following order:
 
-temperature_web_scraping.ipynb
-clean_transform.ipynb
-open pgAdmin4
-create database
-run create table schema: https://github.com/jvolosin/etl-project/tree/main/Queries/create_tables_etl.sql
+- temperature_web_scraping.ipynb
+- clean_transform.ipynb
+- open pgAdmin4
+- create database
+- run create table schema: https://github.com/jvolosin/etl-project/tree/main/Queries/create_tables_etl.sql
 
 File Import Order:
 1. countries.csv
