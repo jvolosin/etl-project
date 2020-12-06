@@ -6,7 +6,7 @@ population Float
 
 wine_consumption
 -
-country varchar  PK FK - wine_consumption.country
+country varchar  PK
 pct_wine_consumption Float
 
 wine_data
@@ -23,7 +23,7 @@ winery varchar
 
 countries
 -
-country varchar PK
+country varchar PK FK >- wine_consumption.country
 
 provinces
 -
@@ -44,3 +44,8 @@ temperature
 -
 country varchar PK FK - countries.country
 avg_temp varchar 
+
+
+
+
+

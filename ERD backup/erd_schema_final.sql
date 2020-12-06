@@ -75,9 +75,6 @@ CREATE TABLE "temperature" (
 ALTER TABLE "wine_production" ADD CONSTRAINT "fk_wine_production_country" FOREIGN KEY("country")
 REFERENCES "countries" ("country");
 
-ALTER TABLE "wine_consumption" ADD CONSTRAINT "fk_wine_consumption_country" FOREIGN KEY("country")
-REFERENCES "wine_consumption" ("country");
-
 ALTER TABLE "wine_data" ADD CONSTRAINT "fk_wine_data_province" FOREIGN KEY("province")
 REFERENCES "provinces" ("province");
 
@@ -86,6 +83,9 @@ REFERENCES "regions" ("region_1");
 
 ALTER TABLE "wine_data" ADD CONSTRAINT "fk_wine_data_region_2" FOREIGN KEY("region_2")
 REFERENCES "region_2" ("region_2");
+
+ALTER TABLE "countries" ADD CONSTRAINT "fk_countries_country" FOREIGN KEY("country")
+REFERENCES "wine_consumption" ("country");
 
 ALTER TABLE "provinces" ADD CONSTRAINT "fk_provinces_country" FOREIGN KEY("country")
 REFERENCES "countries" ("country");
