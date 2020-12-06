@@ -90,8 +90,7 @@ The data set consists of 3 fields:
 Filename: wine_temperature.csv
 Data Source: Wikipedia (web scraping)
 - URL: https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature
-- Data is from Lebanese Economy Forum: https://web.archive.org/web/20150905135247/http://lebanese-economy-forum.com/wdi-gdf-advanced-
-			data-display/show/EN-CLC-AVRT-C/
+- Data is from Lebanese Economy Forum: https://web.archive.org/web/20150905135247/http://lebanese-economy-forum.com/wdi-gdf-advanced-data-display/show/EN-CLC-AVRT-C/
 - Data Time Period: 1961 - 1990
 - Data Accessed: 12/03/2020
 
@@ -145,54 +144,37 @@ the tables had to be imported in a specific order as shown in Database Steps bel
 
 ## Database Steps
 
-The steps to create and execute the IMDB of Wine database are below:  
-        - Python Dependencies: from splinter import Browser
+The steps to create and execute the IMDB of Wine database are below:
 
-                      from bs4 import BeautifulSoup
+1. Python Dependencies: 
 
-                      import pandas as pd
+from splinter import Browser
+from bs4 import BeautifulSoup
+import pandas as pd
+import numpy as np
+import time
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
-                      import numpy as np
+2. Database configuration: See ERD diagram
+3. Is Chrome needed? Yes
+4. What files to run in what order:
 
-                      import time
+temperature_web_scraping.ipynb
+clean_transform.ipynb
+open pgAdmin4
+create database
+run create table schema: https://github.com/jvolosin/etl-project/tree/main/Queries/create_tables_etl.sql
 
-                      from selenium import webdriver
-
-                      from webdriver_manager.chrome import ChromeDriverManager
-
-        - Configurations: See ERD diagram
-        - Is Chrome needed? Yes
-        - What files to run in what order:
-
-		temperature_web_scraping.ipynb
-
-		clean_transform.ipynb
-
-		open pgAdmin4
-
-		create database
-
-		run create table schema:
-
-		    https://github.com/jvolosin/etl-project/tree/main/Queries/create_tables_etl.sql
-
-		File Import Order:
-
-		1. countries.csv
-
-		2. wine_consumption.csv
-
-		3. wine_production.csv
-
-		4. provinces.csv
-
-		5. regions.csv
-
-		6. region_2.csv
-
-		7. wine_data.csv
-
-		8. temperature.csv
+File Import Order:
+1. countries.csv
+2. wine_consumption.csv
+3. wine_production.csv
+4. provinces.csv
+5. regions.csv
+6. region_2.csv
+7. wine_data.csv
+8. temperature.csv
 
        
 ## Example Queries
